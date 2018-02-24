@@ -27,42 +27,52 @@ html
                     | от 1020 руб. в месяц, бесплатный триал
 
         section.eam-section-trust
+            .eam-section-trust__logos-arrow-left#eam-section-trust__logos-arrow-left
+                svg
+                    use(xlink:href="images/sprite.svg#arrow-left")
+            .eam-section-trust__logos-arrow-right#eam-section-trust__logos-arrow-right
+                svg
+                    use(xlink:href="images/sprite.svg#arrow-right")
+
             .eam-main
                 .eam-section-trust__title нам доверяют
+
                 .eam-section-trust__logos#eam-section-trust__logos
-                    .eam-section-trust__logo
-                        svg.eam-company-logos.eam-company-logos--intel
-                            use(xlink:href="images/sprite.svg#intel")
-                    .eam-section-trust__logo
-                        svg.eam-company-logos.eam-company-logos--air
-                            use(xlink:href="images/sprite.svg#air")
-                    .eam-section-trust__logo
-                        svg.eam-company-logos.eam-company-logos--apriori
-                            use(xlink:href="images/sprite.svg#apriori")
-                    .eam-section-trust__logo
-                        svg.eam-company-logos.eam-company-logos--club
-                            use(xlink:href="images/sprite.svg#club")
-                    .eam-section-trust__logo
-                        svg.eam-company-logos.eam-company-logos--santeh
-                            use(xlink:href="images/sprite.svg#santeh")
-                    .eam-section-trust__logo
-                        svg.eam-company-logos.eam-company-logos--alie
-                            use(xlink:href="images/sprite.svg#alie")
-                    .eam-section-trust__logo
-                        svg.eam-company-logos.eam-company-logos--glavbuh
-                            use(xlink:href="images/sprite.svg#glavbuh")
-                    .eam-section-trust__logo
-                        svg.eam-company-logos.eam-company-logos--modern
-                            use(xlink:href="images/sprite.svg#modern")
-                    .eam-section-trust__logo
-                        svg.eam-company-logos.eam-company-logos--ics
-                            use(xlink:href="images/sprite.svg#ics")
-                    .eam-section-trust__logo
-                        svg.eam-company-logos.eam-company-logos--ego
-                            use(xlink:href="images/sprite.svg#ego")
-                    .eam-section-trust__logo
-                        svg.eam-company-logos.eam-company-logos--ics2
-                            use(xlink:href="images/sprite.svg#ics2")
+                    .wrap
+                        .eam-section-trust__logo
+                            svg.eam-company-logos.eam-company-logos--intel
+                                use(xlink:href="images/sprite.svg#intel")
+                        .eam-section-trust__logo
+                            svg.eam-company-logos.eam-company-logos--air
+                                use(xlink:href="images/sprite.svg#air")
+                        .eam-section-trust__logo
+                            svg.eam-company-logos.eam-company-logos--apriori
+                                use(xlink:href="images/sprite.svg#apriori")
+                        .eam-section-trust__logo
+                            svg.eam-company-logos.eam-company-logos--club
+                                use(xlink:href="images/sprite.svg#club")
+                        .eam-section-trust__logo
+                            svg.eam-company-logos.eam-company-logos--santeh
+                                use(xlink:href="images/sprite.svg#santeh")
+                        .eam-section-trust__logo
+                            svg.eam-company-logos.eam-company-logos--alie
+                                use(xlink:href="images/sprite.svg#alie")
+                    .wrap
+                        .eam-section-trust__logo
+                            svg.eam-company-logos.eam-company-logos--glavbuh
+                                use(xlink:href="images/sprite.svg#glavbuh")
+                        .eam-section-trust__logo
+                            svg.eam-company-logos.eam-company-logos--modern
+                                use(xlink:href="images/sprite.svg#modern")
+                        .eam-section-trust__logo
+                            svg.eam-company-logos.eam-company-logos--ics
+                                use(xlink:href="images/sprite.svg#ics")
+                        .eam-section-trust__logo
+                            svg.eam-company-logos.eam-company-logos--ego
+                                use(xlink:href="images/sprite.svg#ego")
+                        .eam-section-trust__logo
+                            svg.eam-company-logos.eam-company-logos--ics2
+                                use(xlink:href="images/sprite.svg#ics2")
 
         section.eam-section-2
             .eam-main
@@ -188,42 +198,66 @@ html
 
 
         script(src='js/foundation.js')
-        // script(src='js/main.js')
+        //- script(src='js/main.js')
 
         script.
             $(function() {
+                var $logos = $('#eam-section-trust__logos');
+                var $partners = $('#eam-section-partners__carousel');
+                var partnersHeight = false;
+                var logosArrow = false;
 
+                function init() {
 
+                    $('.eam-section-trust__logo').unwrap();
+                    //- $('.eam-section-partners__item').unwrap();
 
-                if ($(document).width() < 1124) {
-
-                    var $logos = $('#eam-section-trust__logos');
-                    while ($logos.children('.eam-section-trust__logo').not('.wrap').length) {
-                        $logos.children('.eam-section-trust__logo').not('.wrap').filter(':lt(' + 2 + ')').wrapAll('<div class="wrap">');
+                    if ($(document).width() < 1124) {
+                        while ($logos.children('.eam-section-trust__logo').not('.wrap').length) {
+                            $logos.children('.eam-section-trust__logo').not('.wrap').filter(':lt(' + 2 + ')').wrapAll('<div class="wrap">');
+                        }
+                        $('.eam-section-partners__item').unwrap();
+                        partnersHeight = true;
+                    }
+                    else {
+                        while ($logos.children('.eam-section-trust__logo').not('.wrap').length) {
+                            $logos.children('.eam-section-trust__logo').not('.wrap').filter(':lt(' + 6 + ')').wrapAll('<div class="wrap">');
+                        }
+                        logosArrow = true;
+                        //- while ($partners.children('.eam-section-partners__item').not('.eam-section-partners__slide').length) {
+                        //-     $partners.children('.eam-section-partners__item').not('.eam-section-partners__slide').filter(':lt(' + 3 + ')').wrapAll('<div class="eam-section-partners__slide">');
+                        //- }
                     }
 
-                    $('#eam-section-trust__logos').slick({
+                    $logos.slick({
+                        arrows: logosArrow,
+                        speed: 500,
+                        fade: true,
+                        cssEase: 'linear',
+                        //- autoplay: true,
+                        dots: !logosArrow,
+                        prevArrow: '#eam-section-trust__logos-arrow-left',
+                        nextArrow: '#eam-section-trust__logos-arrow-right'
+                        //- appendDots: '#eam-section-partners__carousel-dots'
+                    });
+
+                    $partners.slick({
                         arrows: false,
                         speed: 500,
                         fade: true,
                         cssEase: 'linear',
-                        autoplay: true,
+                        //- autoplay: true,
+                        adaptiveHeight: partnersHeight,
                         dots: true,
-                        //- appendDots: '#eam-section-partners__carousel-dots'
+                        appendDots: '#eam-section-partners__carousel-dots'
                     });
 
-                    $('.eam-section-partners__item').unwrap();
                 }
-
-                $('#eam-section-partners__carousel').slick({
-                    arrows: false,
-                    speed: 500,
-                    fade: true,
-                    cssEase: 'linear',
-                    autoplay: true,
-                    //adaptiveHeight: true,
-                    dots: true,
-                    appendDots: '#eam-section-partners__carousel-dots'
-                });
+                init();
+                //- $( window ).resize(function() {
+                //-     $logos.slick('unslick');
+                //-     $partners.slick('unslick');
+                //-     init();
+                //- });
 
             });
