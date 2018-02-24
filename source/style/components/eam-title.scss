@@ -1,0 +1,14 @@
+.eam-title {
+    color: #3b3f42;
+    font: {
+        size: 64px;
+        weight: 200;
+    }
+    line-height: 1.09;
+}
+
+@media screen and (max-width: 1123px) {
+    .eam-title {
+        font-size: 32px;
+    }
+}

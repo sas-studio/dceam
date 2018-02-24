@@ -1,0 +1,13 @@
+.eam-main {
+    width: 1302px;
+    margin: 0 auto;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1410px) {
+    .eam-main {
+        width: calc(100% - 40px);
+    }
+}

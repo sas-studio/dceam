@@ -1,0 +1,56 @@
+.eam-section-trust {
+    padding: 70px;
+
+    &__title {
+        color: #49565d;
+        text-align: center;
+        text-transform: uppercase;
+        font: {
+            size: 14px;
+            weight: 600;
+        }
+        letter-spacing: 2px;
+
+        margin-bottom: 90px;
+    }
+
+    &__logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    &__logo {
+        width: 15%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1123px) {
+    .eam-section-trust {
+        padding: 43px 0 7px;
+
+        &__title {
+            margin-bottom: 37px;
+        }
+
+        &__logos {
+            .wrap {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &__logo {
+            width: 45%;
+        }
+    }
+
+
+}

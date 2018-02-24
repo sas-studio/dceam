@@ -1,0 +1,48 @@
+.eam-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // padding: 0 28px;
+    border-radius: 33px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    &--big {
+        height: 65px;
+        font: {
+            size: 22px;
+            weight: 600;
+        }
+    }
+
+    &--default {
+        height: 45px;
+        font: {
+            size: 16px;
+            weight: 600;
+        }
+    }
+
+    &--red {
+        background-color: $red-btn;
+
+        color: #fffefe;
+        svg {
+            fill: white;
+        }
+    }
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+
+        &--right {
+            margin-left: 16px;
+        }
+    }
+
+
+}

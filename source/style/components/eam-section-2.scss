@@ -1,0 +1,117 @@
+.eam-section-2 {
+    background: {
+        image: url(../images/eam-section-2.jpg);
+        size: cover;
+        position: top center;
+    }
+
+    .eam-main {
+        height: 564px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    &__title {
+        color: #454e57;
+        font: {
+            size: 54px;
+            weight: 200;
+        }
+        line-height: 1.39;
+
+        width: 450px;
+        margin-right: 145px;
+    }
+
+    &__prices-block {
+        width: 543px;
+        height: 312px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 29px rgba(#636f75, .1);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__prices-title {
+        color: #6c7a81;
+        font-size: 20px;
+        margin-bottom: 37px;
+    }
+
+    &__prices-price {
+        color: #6c7a81;
+        font-size: 20px;
+
+
+        margin-bottom: 37px;
+
+        span {
+            color: #dee9ee;
+            font-size: 80px;
+            font-weight: bold;
+            line-height: 80px;
+            letter-spacing: 1.6px;
+            margin-right: 10px;
+        }
+    }
+
+    &__prices-subtext {
+        color: #49565d;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2.1px;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 1123px) {
+    .eam-section-2 {
+        background-position: -230px center;
+        padding-top: 55px;
+        padding-bottom: 27px;
+
+        .eam-main {
+            height: auto;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__title {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+            font-size: 32px;
+            padding: 0 20px 0 28px;
+        }
+
+        &__prices-block {
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            padding: 35px 0 47px;
+        }
+
+        &__prices-title {
+            margin-bottom: 29px;
+        }
+
+        &__prices-price {
+            font-size: 16px;
+            span {
+                font-size: 56px;
+                line-height: 56px;
+            }
+            margin-bottom: 33px;
+        }
+
+        &__prices-subtext {
+            font-size: 12px;
+        }
+    }
+}

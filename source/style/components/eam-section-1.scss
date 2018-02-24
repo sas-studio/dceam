@@ -1,0 +1,52 @@
+.eam-section-1 {
+    padding: 93px 0 202px;
+    background: {
+        image: url(../images/eam-section-1.png);
+        size: cover;
+        position: top center;
+    }
+
+    &__logo {
+        margin-bottom: 90px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__btn {
+        width: 214px;
+        margin-bottom: 69px;
+    }
+
+    &__small-text {
+        color: rgba(146, 152, 156, 0.98);
+        font: {
+            size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 1123px) {
+    .eam-section-1 {
+        padding: 45px 0 60px;
+        background-image: url(../images/eam-section-1-white.jpg);
+
+        &__logo {
+            margin-bottom: 40px;
+        }
+
+        &__title {
+            margin-bottom: 27px;
+        }
+
+        &__btn {
+            width: 280px;
+            margin-bottom: 37px;
+        }
+
+        &__small-text {
+            padding-right: 100px;
+        }
+    }
+}

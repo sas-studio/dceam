@@ -4,12 +4,226 @@ doctype html
 html
     head
         title PageTitle
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='style/foundation.css')
         link(rel="stylesheet" href='style/style.css')
     body
-        +select('c-select', ['some1', 'some2', 'some3', 'some4'])
+        section.eam-section-1
+            .eam-main
+                .eam-logo.eam-section-1__logo
+                    svg
+                        use(xlink:href="images/sprite.svg#logo-grey")
+                h1.eam-title.eam-section-1__title
+                    | Автоматизируй
+                    br
+                    | email-маркетинг
+                    br
+                    | за минуты
+                a(href="").eam-btn.eam-section-1__btn.eam-btn--red.eam-btn--big
+                    | Начать
+                    svg.eam-btn__icon.eam-btn__icon--right
+                        use(xlink:href="images/sprite.svg#play")
+                .eam-section-1__small-text
+                    | от 1020 руб. в месяц, бесплатный триал
+
+        section.eam-section-trust
+            .eam-main
+                .eam-section-trust__title нам доверяют
+                .eam-section-trust__logos#eam-section-trust__logos
+                    .eam-section-trust__logo
+                        svg.eam-company-logos.eam-company-logos--intel
+                            use(xlink:href="images/sprite.svg#intel")
+                    .eam-section-trust__logo
+                        svg.eam-company-logos.eam-company-logos--air
+                            use(xlink:href="images/sprite.svg#air")
+                    .eam-section-trust__logo
+                        svg.eam-company-logos.eam-company-logos--apriori
+                            use(xlink:href="images/sprite.svg#apriori")
+                    .eam-section-trust__logo
+                        svg.eam-company-logos.eam-company-logos--club
+                            use(xlink:href="images/sprite.svg#club")
+                    .eam-section-trust__logo
+                        svg.eam-company-logos.eam-company-logos--santeh
+                            use(xlink:href="images/sprite.svg#santeh")
+                    .eam-section-trust__logo
+                        svg.eam-company-logos.eam-company-logos--alie
+                            use(xlink:href="images/sprite.svg#alie")
+                    .eam-section-trust__logo
+                        svg.eam-company-logos.eam-company-logos--glavbuh
+                            use(xlink:href="images/sprite.svg#glavbuh")
+                    .eam-section-trust__logo
+                        svg.eam-company-logos.eam-company-logos--modern
+                            use(xlink:href="images/sprite.svg#modern")
+                    .eam-section-trust__logo
+                        svg.eam-company-logos.eam-company-logos--ics
+                            use(xlink:href="images/sprite.svg#ics")
+                    .eam-section-trust__logo
+                        svg.eam-company-logos.eam-company-logos--ego
+                            use(xlink:href="images/sprite.svg#ego")
+                    .eam-section-trust__logo
+                        svg.eam-company-logos.eam-company-logos--ics2
+                            use(xlink:href="images/sprite.svg#ics2")
+
+        section.eam-section-2
+            .eam-main
+                .eam-section-2__title
+                    | Расти быстрее
+                    br
+                    | Тратить меньше
+                .eam-section-2__prices-block
+                    .eam-section-2__prices-title Цены начинаются с
+                    .eam-section-2__prices-price
+                        span 1020₽
+                        | в месяц
+                    .eam-section-2__prices-subtext c годовым тарифом выгоднее
+
+        section.eam-section-opportunity.eam-section-opportunity--grey
+            .eam-main
+                .eam-section-opportunity__title
+                    | 5 супер-возможностей,
+                    br
+                    | которые помогут вам расти
+                .eam-section-opportunity__blocks
+                    .eam-section-opportunity__left
+                        img(src="images/steps.png", alt="").eam-section-opportunity__img
+                    .eam-section-opportunity__right
+                        .eam-section-opportunity__list
+                            ul.eam-list
+                                li Отправляйте рассылки во “Входящие” с нашей защитой от попадания в СПАМ
+                                li Используйте формы захвата, чтобы увеличивать базу подписчиков
+                                li Сегментируйте свою аудиторию и отправляйте целевые рассылки
+                                li Разделяйте рекламный и транзакционный трафик
+                                li Анализируйте данные о том, какие рассылки конвертируются и что стимулирует продажи
+
+                        a(href="").eam-btn.eam-btn--red.eam-btn--default.eam-section-opportunity__btn
+                            | Попробовать
+
+
+        section.eam-section-opportunity.eam-section-opportunity--white
+            .eam-main
+                .eam-section-opportunity__title
+                    | 5 супер-возможностей,
+                    br
+                    | которые помогут это сделать быстро
+                .eam-section-opportunity__blocks
+                    .eam-section-opportunity__left
+                        img(src="images/steps2.png", alt="").eam-section-opportunity__img
+                    .eam-section-opportunity__right
+                        .eam-section-opportunity__list
+                            ul.eam-list
+                                li Простой интерфейс
+                                li Удобный drag & drop редактор
+                                li Бесплатные шаблоны и адаптивный дизайн
+                                li Свои домены для отправки и статистики
+                                li Суббаккаунты и разграничение доступов
+                                li Техническая поддержка и онлайн-консультации в режиме реального времени
+
+                        a(href="").eam-btn.eam-btn--red.eam-btn--default.eam-section-opportunity__btn
+                            | Попробовать
+
+        section.eam-section-partners
+            .eam-main
+                .h-relative
+                    .eam-section-partners__carousel-dots#eam-section-partners__carousel-dots
+                    .eam-section-partners__carousel#eam-section-partners__carousel
+                        .eam-section-partners__slide
+
+                            .eam-section-partners__item
+                                .eam-section-partners__logo
+                                    svg.eam-company-logos.eam-company-logos--intel
+                                        use(xlink:href="images/sprite.svg#intel")
+                                .eam-section-partners__text Работаем с Digital Contact с 2014 года. Задача была собрать воедино базу наших подписчиков, не нагружая рассылочным модулем сайт компании, и обеспечить срочное и обязательное уведомление клиентов о появлении новых услуг в компании, актуальных новостях. Что хочется отметить: оперативные ответы менеджеров службы поддержки в моменты, когда это необходимо, удобная навигация в личном кабинете, сбор актуальной информации по каждой из рассылок, возможность сегментирования баз.
+                                .eam-section-partners__name Intelligent Solution Group
+
+
+
+                            .eam-section-partners__item
+                                .eam-section-partners__logo
+                                    svg.eam-company-logos.eam-company-logos--air
+                                        use(xlink:href="images/sprite.svg#air")
+                                .eam-section-partners__text Мы искали грамотный инструмент для создания рассылки. Перед нами стояли задачи -  разработать шаблон рассылки своими силами и отслеживать открытия/ клики/ отписки. С помощью платформы Digital Contact был выбран профессиональный редактор, отработан шаблон рассылки по всем необходимым тематикам. Все поставленные задачи выполнены, результатом работы с командой Digital Contact мы довольны
+                                .eam-section-partners__name ICS Travel Group
+
+
+                            .eam-section-partners__item
+                                .eam-section-partners__logo
+                                    svg.eam-company-logos.eam-company-logos--apriori
+                                        use(xlink:href="images/sprite.svg#apriori")
+                                .eam-section-partners__text Команда Digital Contact с помощью платформы email рассылок помогает нам решить вопрос информирование клиентов. Была поставлена цель - донести до клиента информацию новостную, о скидках и т.д. Визуализация продуктов и предложений. Результат - письма доходят, этим довольны. Процент конверсии стабилен.
+                                .eam-section-partners__name Компания “Эго Инжиниринг”
+
+
+                        .eam-section-partners__slide.eam-section-partners__slide--last
+
+                            .eam-section-partners__item
+                                .eam-section-partners__logo
+                                    svg.eam-company-logos.eam-company-logos--club
+                                        use(xlink:href="images/sprite.svg#club")
+                                .eam-section-partners__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum rerum repellendus corporis quos fugit dolorem, ducimus soluta aut impedit qui obcaecati excepturi accusamus laborum doloremque est ex quia totam!
+                                .eam-section-partners__name  Lorem ipsum dolor sit amet.
+
+                            .eam-section-partners__item
+                                .eam-section-partners__logo
+                                    svg.eam-company-logos.eam-company-logos--santeh
+                                        use(xlink:href="images/sprite.svg#santeh")
+                                .eam-section-partners__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum rerum repellendus corporis quos fugit dolorem, ducimus soluta aut impedit qui obcaecati excepturi accusamus laborum doloremque est ex quia totam!
+                                .eam-section-partners__name  Lorem ipsum dolor sit amet.
+
+        section.eam-section-3
+            .eam-main
+                h2.eam-title.eam-section-3__title
+                    | Попробуй тестовый
+                    br
+                    | период DС Lite
+                a(href="").eam-btn.eam-section-3__btn.eam-btn--red.eam-btn--big
+                    | 14 дней бесплатно
+                    svg.eam-btn__icon.eam-btn__icon--right
+                        use(xlink:href="images/sprite.svg#play")
+
+        footer.eam-footer
+            .eam-main
+                | © 2008-2018 Digital Contact
+
 
 
 
         script(src='js/foundation.js')
-        script(src='js/main.js')
+        // script(src='js/main.js')
+
+        script.
+            $(function() {
+
+
+
+                if ($(document).width() < 1124) {
+
+                    var $logos = $('#eam-section-trust__logos');
+                    while ($logos.children('.eam-section-trust__logo').not('.wrap').length) {
+                        $logos.children('.eam-section-trust__logo').not('.wrap').filter(':lt(' + 2 + ')').wrapAll('<div class="wrap">');
+                    }
+
+                    $('#eam-section-trust__logos').slick({
+                        arrows: false,
+                        speed: 500,
+                        fade: true,
+                        cssEase: 'linear',
+                        autoplay: true,
+                        dots: true,
+                        //- appendDots: '#eam-section-partners__carousel-dots'
+                    });
+
+                    $('.eam-section-partners__item').unwrap();
+                }
+
+                $('#eam-section-partners__carousel').slick({
+                    arrows: false,
+                    speed: 500,
+                    fade: true,
+                    cssEase: 'linear',
+                    autoplay: true,
+                    //adaptiveHeight: true,
+                    dots: true,
+                    appendDots: '#eam-section-partners__carousel-dots'
+                });
+
+            });
