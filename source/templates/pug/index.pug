@@ -19,8 +19,8 @@ html
                     | email-маркетинг
                     br
                     | за минуты
-                a(href="").eam-btn.eam-section-1__btn.eam-btn--red.eam-btn--big
-                    | Начать
+                a(href="").eam-btn.eam-section-1__btn.eam-btn--red.eam-btn--big.n-form-show
+                    span Начать
                     svg.eam-btn__icon.eam-btn__icon--right
                         use(xlink:href="images/sprite.svg#play")
                 .eam-section-1__small-text
@@ -105,8 +105,8 @@ html
                                 li Разделяйте рекламный и транзакционный трафик
                                 li Анализируйте данные о том, какие рассылки конвертируются и что стимулирует продажи
 
-                        a(href="").eam-btn.eam-btn--red.eam-btn--default.eam-section-opportunity__btn
-                            | Попробовать
+                        a(href="").eam-btn.eam-btn--red.eam-btn--default.eam-section-opportunity__btn.n-form-show
+                            span Попробовать
 
 
         section.eam-section-opportunity.eam-section-opportunity--white
@@ -128,8 +128,8 @@ html
                                 li Суббаккаунты и разграничение доступов
                                 li Техническая поддержка и онлайн-консультации в режиме реального времени
 
-                        a(href="").eam-btn.eam-btn--red.eam-btn--default.eam-section-opportunity__btn
-                            | Попробовать
+                        a(href="").eam-btn.eam-btn--red.eam-btn--default.eam-section-opportunity__btn.n-form-show
+                            span Попробовать
 
         section.eam-section-partners
             .eam-main
@@ -185,14 +185,72 @@ html
                     | Попробуй тестовый
                     br
                     | период DС Lite
-                a(href="").eam-btn.eam-section-3__btn.eam-btn--red.eam-btn--big
-                    | 14 дней бесплатно
+                a(href="").eam-btn.eam-section-3__btn.eam-btn--red.eam-btn--big.n-form-show
+                    span 14 дней бесплатно
                     svg.eam-btn__icon.eam-btn__icon--right
                         use(xlink:href="images/sprite.svg#play")
 
         footer.eam-footer
             .eam-main
                 | © 2008-2018 Digital Contact
+
+
+        .n-modal-form.n-modal-form--white#n-modal-form(style="display: none;")
+            .n-modal-form__close#n-modal-form__close
+                svg
+                    use(xlink:href="images/sprite.svg#close")
+
+            .n-modal-form__inner
+                .n-modal-form__content
+                    .n-modal-form__title
+                        span
+                            | Записаться
+                            br
+                            | на демо
+                    //- .n-modal-form__subtitle
+                    //-     span Заполните форму и узнайте, как снизить расходы на маркетинг, получать новых клиентов и продавать существующим в 2 раза больше.
+
+                    form(action="").n-modal-form__form
+                        .n-form
+                            .n-form__columns
+                                .n-form__left
+                                    .n-form__input
+                                        input(type="text" required)
+                                        //.n-form__input-error тут будет текст ошибки
+                                        .n-form__input-placeholder ФИО*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+                                    .n-form__input
+                                        input(type="text" required)
+                                        //.n-form__input-error тут будет текст ошибки
+                                        .n-form__input-placeholder +7*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+                                .n-form__rigth
+                                    .n-form__input
+                                        input(type="text" required)
+                                        //.n-form__input-error тут будет текст ошибки
+                                        .n-form__input-placeholder EMAIL*
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+
+                                    .n-form__input
+                                        input(type="text")
+                                        //.n-form__input-error тут будет текст ошибки
+                                        .n-form__input-placeholder Сайт
+                                        .n-form__input-close
+                                            svg
+                                                use(xlink:href="images/sprite.svg#close")
+
+                        .n-modal-form__bottom
+                            .n-modal-form__agreement-text
+                                span Заполняя поле на этой странице, вы даете согласие на обработку &nbsp;
+                                    a(href="") персональных данных
+                            a(href="").n-modal-form__btn
+                                span Отправить
 
 
 
@@ -259,5 +317,52 @@ html
                 //-     $partners.slick('unslick');
                 //-     init();
                 //- });
+
+                // form
+                $('.n-form-show').on('click', function(e) {
+                    e.preventDefault();
+                    $('#n-modal-form').fadeIn(200);
+                    $(document).width() < 1279 && $('body').css('overflow', 'hidden');
+                });
+                $('#n-modal-form__close').on('click', function(e) {
+                    e.preventDefault();
+                    $('#n-modal-form').fadeOut(200);
+                    $(document).width() < 1279 && $('body').css('overflow', 'auto');
+                });
+
+                $('#n-modal-form').on('click', function(e) {
+
+                    function setPlaceholderPosition() {
+                        $inputs = $('.n-form__input input');
+                        for (var i = 0; i < $inputs.length; i++) {
+                            if (!$($inputs[i]).val()) {
+                                var $placeholder = $($inputs[i]).siblings('.n-form__input-placeholder');
+                                $placeholder.removeClass('n-showed');
+                            }
+                        }
+                    }
+                    setPlaceholderPosition();
+
+                    if ($(e.target).closest('.n-form__input-close').length) {
+                        var $input = $(e.target).closest('.n-form__input').find('input');
+                        $input.val('');
+                        setPlaceholderPosition();
+                    }
+
+                    $('.n-form__input-close').removeClass('n-showed');
+
+                    if ($(e.target).is('.n-form__input input')) {
+                        var $closeBtn = $(e.target).siblings('.n-form__input-close');
+                        var $placeholder = $(e.target).siblings('.n-form__input-placeholder');
+
+                        if (!$closeBtn.hasClass('n-showed')) {
+                            $closeBtn.addClass('n-showed');
+                        }
+                        if (!$placeholder.hasClass('n-showed')) {
+                            $placeholder.addClass('n-showed');
+                        }
+                    }
+                });
+
 
             });

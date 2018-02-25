@@ -39,7 +39,7 @@ textarea:focus, input:focus {
     outline: none;
 }
 
-input, textarea, select {
+input, textarea, select, input:invalid {
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;

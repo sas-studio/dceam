@@ -1,0 +1,258 @@
+.n-modal-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    padding-top: 3em;
+    padding-bottom: 2em;
+
+    background-color: #38373b;
+    z-index: 100;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+
+    overflow: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__inner {
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        min-height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__content {
+        width: 818px;
+        height: auto;
+    }
+
+    &__close {
+        position: absolute;
+        top: 3.75em;
+        right: calc(7.929292% + 15px);
+        cursor: pointer;
+        z-index: 110;
+
+
+        svg {
+            width: 33px;
+            height: 33px;
+            fill: white;
+
+            transition: all .10s;
+        }
+
+        &:hover {
+            svg {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__title {
+        span {
+            font-size: 72px; //4.5em; //72px;
+            color: white;
+        }
+        text-align: center;
+        margin-bottom: 58px; //3.625em;//58px;
+    }
+
+    &__subtitle {
+        span {
+            font-size: 18px; //1.125em;//18px;
+            font-weight: 100;
+            color: white;
+
+            line-height: 1.3em;
+            // padding: 0 15px;
+        }
+        text-align: center;
+    }
+
+    &__form {
+        margin-top: 125px; //7.8125em;//125px;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__agreement-text {
+        span {
+            color: #616064;
+            font-size: 12px; //0.75em; //12px;
+            font-style: italic;
+        }
+
+        padding-right: 25px;
+
+        a {
+            color: white;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__btn {
+        width: 194px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff5826;
+        border-radius: 25px;
+
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+
+        box-shadow: 0px 10px 10px rgba(0,0,0,.1);
+
+        span {
+            transition: all 0.10s;
+        }
+
+        &:hover {
+            span {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &--white {
+        background-color: #fff;
+
+        .n-modal-form__close {
+            svg {
+                fill: #9d9d9d;
+            }
+        }
+
+        .n-modal-form__title,
+        .n-modal-form__subtitle {
+            span {
+                color: #404040;
+            }
+        }
+
+        .n-form__input {
+            input {
+                border-color: #d9d8da;
+                color: #696969;
+            }
+            &-placeholder {
+                color: #696969;
+            }
+            &-close {
+                svg { fill: #d9d8da; }
+
+                &:hover {
+                    svg { fill: #696969; }
+                }
+            }
+        }
+
+        .n-modal-form__agreement-text {
+            span {
+                color: #797781;
+            }
+            a {
+                color: #292929;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .n-modal-form {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 1279px) {
+    .n-modal-form {
+        min-height: 100vh;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .n-modal-form {
+        font-size: 16px;
+        padding: 0;
+        overflow: auto;
+
+        &__content {
+            width: 100%;
+            max-width: 600px;
+            padding: 25px;
+            padding-top: 70px;
+        }
+
+        &__close {
+            top: 25px;
+            right: 25px;
+            svg {
+                height: 35px;
+                width: 35px;
+            }
+        }
+
+        &__title {
+            margin-bottom: 30px;
+            span {
+               font-size: 42px;
+            }
+        }
+
+        &__subtitle {
+            span {
+               font-size: 16px;
+            }
+        }
+
+        &__form {
+            margin-top: 30px;
+        }
+
+        &__bottom {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
+        &__agreement-text {
+            padding-right: 0;
+            margin-top: 10px;
+        }
+
+    }
+}
+
+@media screen and (max-height: 660px) {
+    .n-modal-form {
+        &__form {
+            margin-top: 50px;
+        }
+    }
+
+}
