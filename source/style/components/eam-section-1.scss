@@ -25,6 +25,32 @@
             size: 14px;
         }
     }
+
+    &__text {
+        color: #a2aaae;
+        font-size: 16px;
+        width: 416px;
+        line-height: 1.5;
+
+        margin-bottom: 37px;
+    }
+
+    &--second {
+        background-image: url(../images/eam-section-1-2.jpg);
+    }
+
+    &__logo-second {
+        margin-bottom: 56px;
+    }
+
+    &__title-second {
+        margin-bottom: 29px;
+    }
+
+    &__btn-second {
+        width: 320px;
+        margin-bottom: 40px;
+    }
 }
 
 @media screen and (max-width: 1123px) {

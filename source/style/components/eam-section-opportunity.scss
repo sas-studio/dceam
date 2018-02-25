@@ -42,6 +42,21 @@
     &__img {
         box-shadow: 5px 5px 20px rgba(#636f75, .1);
     }
+
+    &__subtitle {
+        color: #363e45;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-bottom: 35px;
+    }
+
+    &__description {
+        color: #76858d;
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 45px;
+    }
 }
 
 @media screen and (max-width: 1123px) {

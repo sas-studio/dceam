@@ -21,6 +21,14 @@
 
     &__title {
         margin-bottom: 56px;
+
+        &--second {
+            color: #424e54 !important;
+        }
+    }
+
+    &--second {
+        background-image: url(../images/eam-section-3-2.jpg)
     }
 }
 
