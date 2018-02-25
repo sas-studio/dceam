@@ -4,6 +4,7 @@
         image: url(../images/eam-section-1.png);
         size: cover;
         position: top center;
+        repeat: no-repeat;
     }
 
     &__logo {
@@ -51,12 +52,36 @@
         width: 320px;
         margin-bottom: 40px;
     }
+
+    &__adaptive-img {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-top: -115px;
+        height: auto;
+        z-index: -1;
+        position: relative;
+        display: none;
+
+        img {
+            width: 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 1123px) {
     .eam-section-1 {
         padding: 45px 0 60px;
         background-image: url(../images/eam-section-1-white.jpg);
+
+        &--second {
+            background-image: none;
+
+            padding-top: 22px;
+        }
+
+        &__adaptive-img {
+            display: block;
+        }
 
         &__logo {
             margin-bottom: 40px;
@@ -73,6 +98,25 @@
 
         &__small-text {
             padding-right: 100px;
+
+            &--second {
+                padding-right: 0;
+                font-size: 16px;
+            }
+        }
+
+        &__text {
+            width: 100%;
+            margin-bottom: 29px;
+        }
+
+        &__btn-second {
+            width: 280px;
+            margin-bottom: 25px;
+            span {
+                font-size: 16px;
+            }
+
         }
     }
 }

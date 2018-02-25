@@ -6,13 +6,17 @@ html
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='style/foundation.css')
-        link(rel="stylesheet" href='style/style.css?3')
+        link(rel="stylesheet" href='style/style.css?4')
     body
         section.eam-section-1.eam-section-1--second
             .eam-main
                 .eam-logo.eam-section-1__logo-second
                     svg
                         use(xlink:href="images/sprite.svg#logo-grey")
+
+                .eam-section-1__adaptive-img
+                    img(src="images/eam-section-1-2-mob.jpg", alt="")
+
                 h1.eam-title.eam-section-1__title-second
                     | Простая
                     br
@@ -26,7 +30,7 @@ html
                     span Начать работу
                     svg.eam-btn__icon.eam-btn__icon--right
                         use(xlink:href="images/sprite.svg#play")
-                .eam-section-1__small-text
+                .eam-section-1__small-text.eam-section-1__small-text--second
                     | 14 дней бесплатно, тарифы от 1020 руб. в месяц
 
         section.eam-section-trust
