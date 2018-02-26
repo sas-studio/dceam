@@ -228,21 +228,21 @@
             <div class="n-form">
               <div class="n-form__columns">
                 <div class="n-form__left">
-                  <div class="n-form__input">
+                  <div class="n-form__input pretty-input">
                     <input type="text" required>
                     <!--.n-form__input-error тут будет текст ошибки-->
-                    <div class="n-form__input-placeholder">ФИО*</div>
-                    <div class="n-form__input-close">
+                    <div class="n-form__input-placeholder pretty-input__placeholder">ФИО*</div>
+                    <div class="n-form__input-close pretty-input__close">
                       <svg>
                         <use xlink:href="images/sprite.svg#close"></use>
                       </svg>
                     </div>
                   </div>
-                  <div class="n-form__input">
+                  <div class="n-form__input pretty-input">
                     <input type="text" required>
                     <!--.n-form__input-error тут будет текст ошибки-->
-                    <div class="n-form__input-placeholder">+7*</div>
-                    <div class="n-form__input-close">
+                    <div class="n-form__input-placeholder pretty-input__placeholder">+7*</div>
+                    <div class="n-form__input-close pretty-input__close">
                       <svg>
                         <use xlink:href="images/sprite.svg#close"></use>
                       </svg>
@@ -250,21 +250,21 @@
                   </div>
                 </div>
                 <div class="n-form__rigth">
-                  <div class="n-form__input">
+                  <div class="n-form__input pretty-input">
                     <input type="text" required>
                     <!--.n-form__input-error тут будет текст ошибки-->
-                    <div class="n-form__input-placeholder">EMAIL*</div>
-                    <div class="n-form__input-close">
+                    <div class="n-form__input-placeholder pretty-input__placeholder">EMAIL*</div>
+                    <div class="n-form__input-close pretty-input__close">
                       <svg>
                         <use xlink:href="images/sprite.svg#close"></use>
                       </svg>
                     </div>
                   </div>
-                  <div class="n-form__input">
+                  <div class="n-form__input pretty-input">
                     <input type="text">
                     <!--.n-form__input-error тут будет текст ошибки-->
-                    <div class="n-form__input-placeholder">Сайт</div>
-                    <div class="n-form__input-close">
+                    <div class="n-form__input-placeholder pretty-input__placeholder">Сайт</div>
+                    <div class="n-form__input-close pretty-input__close">
                       <svg>
                         <use xlink:href="images/sprite.svg#close"></use>
                       </svg>
@@ -281,114 +281,6 @@
       </div>
     </div>
     <script src="js/foundation.js"></script>
-    <script>
-      $(function() {
-          var $logos = $('#eam-section-trust__logos');
-          var $partners = $('#eam-section-partners__carousel');
-          var partnersHeight = false;
-          var logosArrow = false;
-      
-          function init() {
-      
-              $('.eam-section-trust__logo').unwrap();
-              //- $('.eam-section-partners__item').unwrap();
-      
-              if ($(document).width() < 1124) {
-                  while ($logos.children('.eam-section-trust__logo').not('.wrap').length) {
-                      $logos.children('.eam-section-trust__logo').not('.wrap').filter(':lt(' + 2 + ')').wrapAll('<div class="wrap">');
-                  }
-                  $('.eam-section-partners__item').unwrap();
-                  partnersHeight = true;
-              }
-              else {
-                  while ($logos.children('.eam-section-trust__logo').not('.wrap').length) {
-                      $logos.children('.eam-section-trust__logo').not('.wrap').filter(':lt(' + 6 + ')').wrapAll('<div class="wrap">');
-                  }
-                  logosArrow = true;
-                  //- while ($partners.children('.eam-section-partners__item').not('.eam-section-partners__slide').length) {
-                  //-     $partners.children('.eam-section-partners__item').not('.eam-section-partners__slide').filter(':lt(' + 3 + ')').wrapAll('<div class="eam-section-partners__slide">');
-                  //- }
-              }
-      
-              $logos.slick({
-                  arrows: logosArrow,
-                  speed: 500,
-                  fade: true,
-                  cssEase: 'linear',
-                  //- autoplay: true,
-                  dots: !logosArrow,
-                  prevArrow: '#eam-section-trust__logos-arrow-left',
-                  nextArrow: '#eam-section-trust__logos-arrow-right'
-                  //- appendDots: '#eam-section-partners__carousel-dots'
-              });
-      
-              $partners.slick({
-                  arrows: false,
-                  speed: 500,
-                  fade: true,
-                  cssEase: 'linear',
-                  //- autoplay: true,
-                  adaptiveHeight: partnersHeight,
-                  dots: true,
-                  appendDots: '#eam-section-partners__carousel-dots'
-              });
-      
-          }
-          init();
-          //- $( window ).resize(function() {
-          //-     $logos.slick('unslick');
-          //-     $partners.slick('unslick');
-          //-     init();
-          //- });
-      
-          // form
-          $('.n-form-show').on('click', function(e) {
-              e.preventDefault();
-              $('#n-modal-form').fadeIn(200);
-              $(document).width() < 1279 && $('body').css('overflow', 'hidden');
-          });
-          $('#n-modal-form__close').on('click', function(e) {
-              e.preventDefault();
-              $('#n-modal-form').fadeOut(200);
-              $(document).width() < 1279 && $('body').css('overflow', 'auto');
-          });
-      
-          $('#n-modal-form').on('click', function(e) {
-      
-              function setPlaceholderPosition() {
-                  $inputs = $('.n-form__input input');
-                  for (var i = 0; i < $inputs.length; i++) {
-                      if (!$($inputs[i]).val()) {
-                          var $placeholder = $($inputs[i]).siblings('.n-form__input-placeholder');
-                          $placeholder.removeClass('n-showed');
-                      }
-                  }
-              }
-              setPlaceholderPosition();
-      
-              if ($(e.target).closest('.n-form__input-close').length) {
-                  var $input = $(e.target).closest('.n-form__input').find('input');
-                  $input.val('');
-                  setPlaceholderPosition();
-              }
-      
-              $('.n-form__input-close').removeClass('n-showed');
-      
-              if ($(e.target).is('.n-form__input input')) {
-                  var $closeBtn = $(e.target).siblings('.n-form__input-close');
-                  var $placeholder = $(e.target).siblings('.n-form__input-placeholder');
-      
-                  if (!$closeBtn.hasClass('n-showed')) {
-                      $closeBtn.addClass('n-showed');
-                  }
-                  if (!$placeholder.hasClass('n-showed')) {
-                      $placeholder.addClass('n-showed');
-                  }
-              }
-          });
-      
-      
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

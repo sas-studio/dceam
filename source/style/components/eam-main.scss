@@ -11,3 +11,15 @@
         width: calc(100% - 40px);
     }
 }
+
+@media screen and (min-width: 1123px) {
+    .eam-desktop-hide {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1123px) {
+    .eam-adaptive-hide {
+        display: none;
+    }
+}
