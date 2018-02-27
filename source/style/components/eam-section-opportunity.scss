@@ -16,6 +16,11 @@
         margin-bottom: 49px;
         text-align: center;
         letter-spacing: 0.6px;
+
+        &--onside {
+            text-align: left;
+            line-height: 1.5;
+        }
     }
 
     &__blocks {
@@ -41,12 +46,39 @@
 
     &__img {
         box-shadow: 5px 5px 20px rgba(#636f75, .1);
+
+        &--extra {
+            box-shadow: 0 0 0 rgba(white, 0);
+            width: calc(100% + 100px);
+            max-width: calc(100% + 100px);
+            margin-left: -100px;
+            margin-bottom: -46px;
+        }
+    }
+
+    &__subtitle {
+        color: #363e45;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-bottom: 35px;
+    }
+
+    &__description {
+        color: #76858d;
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 45px;
     }
 }
 
 @media screen and (max-width: 1123px) {
     .eam-section-opportunity {
         padding: 40px 0;
+
+        &--third {
+            padding-bottom: 0;
+        }
 
         .eam-main {
             width: 100%;
@@ -63,14 +95,24 @@
             font-size: 18px;
             margin-bottom: 23px;
             padding: 0 20px;
+
+            &--onside {
+                padding: 0;
+                margin-bottom: 30px;
+            }
         }
 
         &__img {
             margin-bottom: 49px;
+
+            &--extra {
+                margin-bottom: 0;
+            }
         }
 
         &__left {
-            text-align: center;
+            text-align: letf;
+            padding-left: 20px;
         }
 
         &__right {
@@ -79,6 +121,16 @@
 
         &__btn {
             width: 280px;
+        }
+
+        &__subtitle {
+            font-size: 24px;
+            margin-bottom: 27px;
+        }
+
+        &__description {
+            font-size: 18px;
+            margin-bottom: 30px;
         }
 
     }

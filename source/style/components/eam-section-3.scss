@@ -19,8 +19,37 @@
         font-size: 18px;
     }
 
+    &__btn2 {
+        width: 314px;
+        font-size: 18px;
+    }
+
     &__title {
         margin-bottom: 56px;
+
+        &--second {
+            color: #424e54 !important;
+        }
+
+        &--third {
+            margin-bottom: 45px;
+        }
+    }
+
+    &__subtext {
+        color: white;
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 50px;
+        letter-spacing: 2px;
+    }
+
+    &--second {
+        background-image: url(../images/eam-section-3-2.jpg)
+    }
+
+    &--third {
+        background-image: url(../images/eam-section-3-3.jpg)
     }
 }
 
@@ -30,11 +59,25 @@
 
         &__title {
             margin-bottom: 40px;
+
+            &--third {
+                font-size: 22px !important;
+                padding: 0 40px;
+            }
         }
 
         &__btn {
             width: 280px;
             font-size: 14px;
+        }
+
+        &__btn2 {
+            width: 280px;
+            font-size: 18px;
+        }
+
+        &__subtext {
+            margin-top: 40px;
         }
     }
 }

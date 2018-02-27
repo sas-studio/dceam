@@ -6,25 +6,84 @@ html
         title PageTitle
         meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(rel="stylesheet" href='style/foundation.css')
-        link(rel="stylesheet" href='style/style.css?3')
+        link(rel="stylesheet" href='style/style.css?4')
     body
-        section.eam-section-1
+        section.eam-section-1.eam-section-1--third
             .eam-main
-                .eam-logo.eam-section-1__logo
+                .eam-logo.eam-section-1__logo-third
                     svg
                         use(xlink:href="images/sprite.svg#logo-grey")
-                h1.eam-title.eam-section-1__title
-                    | Автоматизируй
+
+                .eam-section-1__adaptive-img
+                    img(src="images/eam-section-1-2-mob2.jpg", alt="")
+
+                h1.eam-title2.eam-section-1__title-third
+                    | Русскоязычная платформа
                     br
-                    | email-маркетинг
+                    | для email-маркетинга
                     br
-                    | за минуты
-                a(href="").eam-btn.eam-section-1__btn.eam-btn--red.eam-btn--big.n-form-show
-                    span Начать
-                    svg.eam-btn__icon.eam-btn__icon--right
-                        use(xlink:href="images/sprite.svg#play")
-                .eam-section-1__small-text
-                    | от 1020 руб. в месяц, бесплатный триал
+                    | с умной сегментацией
+                    br
+                    | и простым интерфейсом
+
+                .eam-section-1__text.eam-section-1__text--third
+                    | Регулярные коммуникаций, чтобы конвертировать посетителей в покупателей и сформировать лояльность от 1020 руб. в месяц
+
+                form.eam-top-form.eam-section-1__form
+                    .eam-top-form__title
+                        | Получите бесплатный доступ на &nbsp;
+                        span 14 дней
+                        | &nbsp; прямо сейчас
+
+                    .eam-top-form__input.pretty-input
+                        input(type="text")
+                        //- .n-form__input-error тут будет текст ошибки
+                        .eam-top-form__input-placeholder.pretty-input__placeholder ФИО
+                        .eam-top-form__input-close.pretty-input__close
+                            svg
+                                use(xlink:href="images/sprite.svg#close")
+
+                    .eam-top-form__input.pretty-input
+                        input(type="email")
+                        //- .n-form__input-error тут будет текст ошибки
+                        .eam-top-form__input-placeholder.pretty-input__placeholder EMAIL
+                        .eam-top-form__input-close.pretty-input__close
+                            svg
+                                use(xlink:href="images/sprite.svg#close")
+
+                    .eam-top-form__input.pretty-input
+                        input(type="text")
+                        //- .n-form__input-error тут будет текст ошибки
+                        .eam-top-form__input-placeholder.pretty-input__placeholder САЙТ
+                        .eam-top-form__input-close.pretty-input__close
+                            svg
+                                use(xlink:href="images/sprite.svg#close")
+
+                    button(type="submit").eam-btn.eam-btn--red.eam-btn--big.eam-top-form__btn.eam-btn--shadow
+                        span Хочу Попробовать
+
+
+        section.eam-section-opportunity.eam-section-opportunity--grey.eam-section-opportunity--third
+            .eam-main
+                .eam-section-opportunity__blocks
+                    .eam-section-opportunity__left
+                        img(src="images/steps6.png", alt="").eam-section-opportunity__img.eam-section-opportunity__img--extra
+                    .eam-section-opportunity__right
+                        .eam-section-opportunity__title.eam-section-opportunity__title--onside
+                            | Вы сможете, без дизайнера и программиста:
+                        .eam-section-opportunity__list
+                            ul.eam-list.eam-list--list-ok
+                                li Создавать письма из шаблонов или в простом drag & drop редакторе
+                                li Включать в текст картинки, CTA-кнопки и иконки соц.сетей
+                                li Отправлять тому, кому нужно - по сегментированной базе
+                                li Пополнять базу подписчиков при помощи форм захвата и страниц сбора
+                                li Настроить автописьма на разные действия посетителей
+                                li Следить за результатами в режиме реального времени
+
+                        a(href="").eam-btn.eam-btn--red.eam-btn--default.eam-section-opportunity__btn.n-form-show.eam-adaptive-hide
+                            span Попробовать
+
+
 
         section.eam-section-trust
             .eam-section-trust__logos-arrow-left#eam-section-trust__logos-arrow-left
@@ -74,62 +133,58 @@ html
                             svg.eam-company-logos.eam-company-logos--ics2
                                 use(xlink:href="images/sprite.svg#ics2")
 
-        section.eam-section-2
+
+
+        section.eam-section-advice
             .eam-main
-                .eam-section-2__title
-                    | Расти быстрее
-                    br
-                    | Тратить меньше
-                .eam-section-2__prices-block
-                    .eam-section-2__prices-title Цены начинаются с
-                    .eam-section-2__prices-price
-                        span 1020₽
-                        | в месяц
-                    .eam-section-2__prices-subtext c годовым тарифом выгоднее
+                span.eam-section-advice__logo Совет
 
-        section.eam-section-opportunity.eam-section-opportunity--grey
-            .eam-main
-                .eam-section-opportunity__title
-                    | 5 супер-возможностей,
-                    br
-                    | которые помогут вам расти
-                .eam-section-opportunity__blocks
-                    .eam-section-opportunity__left
-                        img(src="images/steps.png", alt="").eam-section-opportunity__img
-                    .eam-section-opportunity__right
-                        .eam-section-opportunity__list
-                            ul.eam-list
-                                li Отправляйте рассылки во “Входящие” с нашей защитой от попадания в СПАМ
-                                li Используйте формы захвата, чтобы увеличивать базу подписчиков
-                                li Сегментируйте свою аудиторию и отправляйте целевые рассылки
-                                li Разделяйте рекламный и транзакционный трафик
-                                li Анализируйте данные о том, какие рассылки конвертируются и что стимулирует продажи
+                h4.eam-section-advice__title.eam-adaptive-hide Как сформировать лояльную базу и попадать во “Входящие”?
 
-                        a(href="").eam-btn.eam-btn--red.eam-btn--default.eam-section-opportunity__btn.n-form-show
-                            span Попробовать
+                h4.eam-section-advice__title.eam-desktop-hide Что отправлять, чтобы сформировать лояльную базу и попадать во “Входящие”?
 
 
-        section.eam-section-opportunity.eam-section-opportunity--white
-            .eam-main
-                .eam-section-opportunity__title
-                    | 5 супер-возможностей,
-                    br
-                    | которые помогут это сделать быстро
-                .eam-section-opportunity__blocks
-                    .eam-section-opportunity__left
-                        img(src="images/steps2.png", alt="").eam-section-opportunity__img
-                    .eam-section-opportunity__right
-                        .eam-section-opportunity__list
-                            ul.eam-list
-                                li Простой интерфейс
-                                li Удобный drag & drop редактор
-                                li Бесплатные шаблоны и адаптивный дизайн
-                                li Свои домены для отправки и статистики
-                                li Суббаккаунты и разграничение доступов
-                                li Техническая поддержка и онлайн-консультации в режиме реального времени
+                .eam-advices.eam-section-advice__advices
 
-                        a(href="").eam-btn.eam-btn--red.eam-btn--default.eam-section-opportunity__btn.n-form-show
-                            span Попробовать
+                    .eam-advices__advice.eam-adaptive-hide
+                        .eam-advices__top Отправляйте
+                        .eam-advices__center 1-2
+                        .eam-advices__bottom писем в неделю
+
+                    .eam-advices__advice
+                        .eam-advices__top.eam-adaptive-hide структура рассылки
+                        .eam-advices__center 75
+                            span %
+                        .eam-advices__bottom полезный контент
+
+                    .eam-advices__advice
+                        .eam-advices__top.eam-adaptive-hide &nbsp;
+                        .eam-advices__center 10
+                            span %
+                        .eam-advices__bottom
+                            | промо продукта,
+                            br
+                            | как решение
+                            br
+                            | проблемы клиента
+
+                    .eam-advices__advice
+                        .eam-advices__top.eam-adaptive-hide &nbsp;
+                        .eam-advices__center 10
+                            span %
+                        .eam-advices__bottom призыв к действию
+
+                    .eam-advices__advice
+                        .eam-advices__top.eam-adaptive-hide &nbsp;
+                        .eam-advices__center 5
+                            span %
+                        .eam-advices__bottom
+                            | продажи, скидки,
+                            br
+                            | акции
+
+
+
 
         section.eam-section-partners
             .eam-main
@@ -179,16 +234,19 @@ html
                                 .eam-section-partners__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum rerum repellendus corporis quos fugit dolorem, ducimus soluta aut impedit qui obcaecati excepturi accusamus laborum doloremque est ex quia totam!
                                 .eam-section-partners__name  Lorem ipsum dolor sit amet.
 
-        section.eam-section-3
+        section.eam-section-3.eam-section-3--third
             .eam-main
-                h2.eam-title.eam-section-3__title
-                    | Попробуй тестовый
+                h2.eam-title2.eam-section-3__title.eam-section-3__title--second.eam-section-3__title--third
+                    | Конвертируйте посетителей
                     br
-                    | период DС Lite
-                a(href="").eam-btn.eam-section-3__btn.eam-btn--red.eam-btn--big.n-form-show
-                    span 14 дней бесплатно
+                    | в покупателей в 2 раза быстрей
+
+                a(href="").eam-btn.eam-section-3__btn2.eam-btn--red.eam-btn--big.n-form-show
+                    span Начать сейчас
                     svg.eam-btn__icon.eam-btn__icon--right
                         use(xlink:href="images/sprite.svg#play")
+
+                .eam-section-3__subtext 14 дней бесплатно
 
         footer.eam-footer
             .eam-main
